@@ -1,7 +1,6 @@
 import ellipse from '@/public/assets/images/Ellipse.png'
 import phoneImage from '@/public/assets/images/phones.png'
 import SignUpForm from '@/components/auth/SignUpForm'
-import Button from '@/components/global/Button'
 import Icon from '@/components/global/Icon'
 
 export default function Home() {
@@ -23,8 +22,12 @@ export default function Home() {
       </div>
       <div className="w-3/5 p-20">
         <div className="max-w-4xl mx-auto flex-col items-center justify-center">
-          <Icon.CapzullLogoIcon className="mb-14"/>
+          <Icon.CapzullLogoIcon className="mb-14" />
           <SignUpForm />
+          <div className="flex items-center space-x-3 mt-24">
+            <Icon.GooglePlayIcon />
+            <Icon.AppStoreIcon />
+          </div>
         </div>
       </div>
     </div>
