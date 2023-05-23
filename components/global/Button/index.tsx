@@ -7,6 +7,7 @@ interface ButtonProps {
     icon?: string | React.ReactNode;
     className?: string;
     children: string | React.ReactNode;
+    type?: "submit" | "button" | "reset";
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
     icon = null,
     className,
     children,
+    type = "button",
 }) => {
     const buttonTheme = (theme: string) => {
         const bgClass = theme === "primary" ? "bg-primary" : "bg-secondary";
@@ -25,18 +27,15 @@ const Button: React.FC<ButtonProps> = ({
     return (
         <button
             disabled={disabled}
+            type={type}
             className={cn(
-                "flex items-center justify-center transition-all ease-in text-center gap-4 font-semibold disabled:cursor-not-allowed disabled:opacity-50 text-sm text-white rounded-[5px] py-4 w-2/4",
+                "flex items-center justify-center gap-2 font-semibold text-sm text-white rounded-[5px] h-14 w-full",
                 buttonTheme(theme),
                 className
             )}
         >
-            {icon && typeof icon === "string" ? (
-                <img src={icon} alt="Icon" className="mr-2" />
-            ) : (
-                <span className="mr-2">{icon}</span>
-            )}
-            {children}
+            {icon && <span className="mr-2">{icon}</span>}
+            <span>{children}</span>
         </button>
     );
 };

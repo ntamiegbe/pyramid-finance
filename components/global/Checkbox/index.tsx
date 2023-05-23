@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 interface CheckboxProps {
-    label?: string;
+    label?: React.ReactNode;
     checked?: boolean;
     onChange?: (checked: boolean) => void;
 }
@@ -25,7 +25,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => {
                 onChange={handleCheckboxChange}
                 className="mr-2"
             />
-            {label}
+            <span className="text-sm text-secondary font-normal">{label}</span>
         </label>
     );
 };

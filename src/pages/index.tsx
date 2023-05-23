@@ -22,9 +22,10 @@ export default function Home() {
         </div>
       </div>
       <div className="w-3/5 p-20">
-          <Icon.CapzullLogoIcon />
+        <div className="max-w-4xl mx-auto flex-col items-center justify-center">
+          <Icon.CapzullLogoIcon className="mb-14"/>
           <SignUpForm />
-          
+        </div>
       </div>
     </div>
   )

@@ -12,23 +12,25 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({ label, type, placeholder, name, required }) => {
     const [showPassword, setShowPassword] = useState(false);
 
+    const isPasswordType = type === "password";
+
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
     };
 
-    const isPasswordType = type === "password";
+    const inputType = isPasswordType && showPassword ? "text" : type;
 
     return (
         <div>
-            {label && <label htmlFor={name}>{label}</label>}
+            {label && <label htmlFor={name} className="text-sm text-secondary font-normal">{label}</label>}
             <div className="relative">
                 <input
-                    type={showPassword ? "text" : "password"}
+                    type={inputType}
                     placeholder={placeholder}
                     name={name}
                     id={name}
                     required={required}
-                    className="w-full px-4 py-2 border border-stroke rounded-[5px] focus:outline-none focus:ring-[1px] focus:ring-blueStroke focus:border-none"
+                    className="w-full px-4 h-14 mt-2 border border-stroke rounded-[5px] focus:outline-none focus:ring-[1px] focus:ring-blueStroke focus:border-none"
                 />
                 {isPasswordType && (
                     <button

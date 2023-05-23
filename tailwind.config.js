@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         'stroke': '#D1D1D1',
-        'blueStroke': '#007AFF'
+        'blueStroke': '#007AFF',
+        'dark': '#1D1D1D',
+        'secondary': '#2D3748'
       }
     },
   },
