@@ -1,10 +1,9 @@
-  import React, { useState } from "react";
-  import ellipse from "@/public/assets/images/Ellipse.png";
-  import phoneImage from "@/public/assets/images/phones.png";
-  import SignUpForm from "@/components/auth/SignUpForm";
-  import Icon from "@/components/global/Icon";
+import React from "react";
+import ellipse from "@/public/assets/images/Ellipse.png";
+import phoneImage from "@/public/assets/images/phones.png";
+import SignUpForm from "@/components/auth/SignUpForm";
+import Icon from "@/components/global/Icon";
 import Carousel from "@/components/auth/Carousel";
-
 
 export default function Home() {
   const phoneImages = [
@@ -14,9 +13,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen bg-white flex">
+    <div className="h-screen bg-white flex flex-col md:flex-row">
       <div className="hidden md:flex w-2/5 blue-gradient p-20 flex-col items-center relative">
-        <h1 className="text-[28px] leading-[42px] font-semibold text-center text-white mb-10">
+        <h1 className="text-2xl md:text-4xl leading-[42px] font-semibold text-center text-white mb-10">
           Social media shared today, tomorrow or by location
         </h1>
         <div className="relative p-10">
@@ -26,11 +25,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-3/5 p-20">
+      <div className="flex-1 p-8 md:p-20">
         <div className="max-w-4xl mx-auto flex-col items-center justify-center">
           <Icon.CapzullLogoIcon className="mb-14" />
-          <SignUpForm />
-          <div className="flex items-center space-x-3 mt-24">
+          <div className="w-full">
+            <SignUpForm />
+          </div>
+          <div className="hidden md:flex items-center space-x-3 mt-24">
             <Icon.GooglePlayIcon />
             <Icon.AppStoreIcon />
           </div>
