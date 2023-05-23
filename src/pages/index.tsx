@@ -13,7 +13,9 @@ export default function Home() {
   ];
 
   return (
+    // Parent container with a white background and flex layout
     <div className="h-screen bg-white flex flex-col md:flex-row">
+      {/* Container for the left section (hidden on small screens) */}
       <div className="hidden md:flex w-2/5 blue-gradient p-20 flex-col items-center relative">
         <h1 className="text-2xl md:text-4xl leading-[42px] font-semibold text-center text-white mb-10">
           Social media shared today, tomorrow or by location
@@ -25,6 +27,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Container for the right section */}
       <div className="flex-1 p-8 md:p-20">
         <div className="max-w-4xl mx-auto flex-col items-center justify-center">
           <Icon.CapzullLogoIcon className="mb-14" />

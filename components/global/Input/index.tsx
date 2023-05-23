@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 
+// Define the props interface for the Input component
 interface InputProps {
-    label?: string;
-    type: string;
-    placeholder?: string;
-    name: string;
-    required?: boolean;
+    label?: string; 
+    type: string; 
+    placeholder?: string; 
+    name: string; 
+    required?: boolean; 
 }
 
 const Input: React.FC<InputProps> = ({ label, type, placeholder, name, required }) => {
-    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(false); 
 
-    const isPasswordType = type === "password";
+    const isPasswordType = type === "password"; 
 
+    // Event handler for toggling password visibility
     const handleTogglePassword = () => {
         setShowPassword(!showPassword);
     };
 
+    // Determine the input type based on whether it's a password and if it should be shown
     const inputType = isPasswordType && showPassword ? "text" : type;
 
     return (

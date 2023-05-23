@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 interface CheckboxProps {
-    label?: React.ReactNode;
-    checked?: boolean;
-    onChange?: (checked: boolean) => void;
+    label?: React.ReactNode; 
+    checked?: boolean; 
+    onChange?: (checked: boolean) => void; 
 }
 
 const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => {
     const [isChecked, setIsChecked] = useState(checked || false);
 
     const handleCheckboxChange = () => {
-        const newChecked = !isChecked;
-        setIsChecked(newChecked);
+        const newChecked = !isChecked; // Toggle the checked state
+        setIsChecked(newChecked); // Update the checked state in the component's state
         if (onChange) {
-            onChange(newChecked);
+            onChange(newChecked); // Call the onChange callback function with the new checked state
         }
     };
 
