@@ -22,7 +22,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             {/* Render the dot indicators for each image */}
             <div className="flex items-center justify-center space-x-3 mt-4 absolute bottom-5 left-0 right-0">
                 {images.map((_, index) => (
-                    <div key={index} onClick={() => handleImageChange(index)}>
+                    <div key={index} onClick={() => handleImageChange(index)} className="cursor-pointer">
                         {index === activeImageIndex ? <Icon.ActiveSliderDotIcon /> : <Icon.SliderDotIcon />}
                     </div>
                 ))}

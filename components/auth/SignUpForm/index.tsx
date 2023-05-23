@@ -17,7 +17,7 @@ const SignUpForm = () => {
       </div>
 
       <form>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 mb-4">
           <div>
             <Input name="first_name" label="First name" type="text" required />
           </div>
@@ -25,7 +25,7 @@ const SignUpForm = () => {
             <Input name="last_name" label="Last name" type="text" required />
           </div>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 mb-4">
           <div>
             <Input
               name="email_or_phone_number"
