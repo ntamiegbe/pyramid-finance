@@ -61,13 +61,10 @@ const SignUpForm = () => {
             <Checkbox
               label="Remember me"
               checked={true}
-              onChange={(checked) =>
-                console.log("Checkbox checked:", checked)
-              }
             />
             <a
-              href="#"
-              className="text-sm text-blueStroke font-normal underline"
+              href="/"
+              className="text-sm text-blueStroke font-normal hover:underline"
             >
               Forgot password?
             </a>
@@ -76,14 +73,11 @@ const SignUpForm = () => {
             label={
               <span>
                 I agree to all the{" "}
-                <a className="text-blueStroke">Terms</a> and{" "}
-                <a className="text-blueStroke">Privacy policy</a>
+                <a className="text-blueStroke hover:underline" href="/">Terms</a> and{" "}
+                <a className="text-blueStroke hover:underline" href="/">Privacy policy</a>
               </span>
             }
             checked={true}
-            onChange={(checked) =>
-              console.log("Checkbox checked:", checked)
-            }
           />
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-4">
@@ -98,7 +92,7 @@ const SignUpForm = () => {
         </div>
         <p className="text-sm text-secondary font-normal text-center mt-6">
           Don’t have an account?
-          <a href="#" className="text-blueStroke ml-1">
+          <a href="/" className="text-blueStroke ml-1 hover:underline">
             Log In
           </a>
         </p>

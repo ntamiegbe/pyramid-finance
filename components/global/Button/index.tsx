@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
             disabled={disabled}
             type={type}
             className={cn(
-                "flex items-center justify-center gap-2 font-semibold text-sm text-white rounded-[5px] h-14 w-full",
+                "flex items-center justify-center gap-2 hover:bg-opacity-95 font-semibold text-sm text-white rounded-[5px] h-14 w-full",
                 buttonTheme(theme),
                 className
             )}
